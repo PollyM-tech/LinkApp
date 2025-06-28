@@ -45,5 +45,6 @@ api.add_resource(LoginResource, "/login")
 api.add_resource(LinkResource, "/links", "/links/<int:id>")
 api.add_resource(CategoryResource, "/categories", "/categories/<int:id>")
 
-if __name__ == "__main__":
-    app.run(debug=True, port=5555)
+# if __name__ == "__main__":
+#     port = int(os.environ.get("PORT", 5555))
+#     app.run(debug=False, host="0.0.0.0", port=port)

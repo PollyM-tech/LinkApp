@@ -1,8 +1,8 @@
 {
   "build": {
     "builder": "NIXPACKS",
-    "buildCommand": "cd ../frontend && npm install && npm run build && cd ../backend && pip install pipenv && pipenv install",
-    "startCommand": "pipenv run gunicorn app:app",
-    "root": "backend"
+    "buildCommand": "cd frontend && npm install && npm run build && cd ../backend && pip install pipenv && pipenv install",
+    "startCommand": "pipenv run gunicorn app:app --chdir backend",
+    "root": "."
   }
 }
